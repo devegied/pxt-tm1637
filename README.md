@@ -53,7 +53,7 @@ set display brightness.
 light indicated segments at given position
 segments is display segments to light
 pos is the position of the digit
-segments value can by calculated by adding segmen values:
+segments value can be calculated by adding segmen values:
 ![](segment_values.png)
 
 ## Demo
