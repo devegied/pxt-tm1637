@@ -1,71 +1,79 @@
-# Four Digit Display (TM1637)
-makecode Four Digit Display (TM1637) Package for microbit  
+> Open this page at [https://devegied.github.io/pxt-tm1637/](https://devegied.github.io/pxt-tm1637/)
 
-LED Digit Display Module with 1-6 (normal four) 7-segment LED, it can show number. It has TM1637 chip inside, control with a 2-wire interface.  
+# Digit Display (TM1637)
+makecode Digit Display (TM1637) extension for micro:bit
 
-Author: shaoziyang  
-Date:   2018.Mar  
+LED Digit Display Module with 1-6 (normal four) 7-segment LED, it can show numbers. It has TM1637 chip controled with a 2-wire interface.
 
-![](https://raw.githubusercontent.com/microbit-makecode-packages/TM1637/master/icon.png)
+Original author: shaoziyang https://github.com/makecode-extensions/TM1637
+
+![](icon.png)
 
 ## Usage
 
-open your microbit makecode project, in Add Package, paste  
-
-https://github.com/microbit-makecode-packages/TM1637  
-
-to search box then search.
-
-![](https://raw.githubusercontent.com/microbit-makecode-packages/TM1637/master/4-LED.jpg)
+In your micro:bit makecode project click on **Extensions** under the gearwheel menu
+search for **https://github.com/devegied/pxt-tm1637** and import
 
 ## API
 
-- **create(clk: DigitalPin, dio: DigitalPin, intensity: number, count: number)**  
-create a TM1637 object.  
-  - clk, any DigitalPin  
-  - dio, any DigitalPin  
-  - intensity, set display brightness, range [0-8]  
-  - count, LED count, range [1-5]  
+- **create(clk: DigitalPin, dio: DigitalPin, intensity: number, count: number)**
+create a TM1637 object.
+  - clk, any DigitalPin
+  - dio, any DigitalPin
+  - intensity, set display brightness, range [0-8]
+  - count, digit count, range [1-6]
 
-- **on()**  
-turn on the display.  
+- **on()**
+turn on the display.
 
-- **off()**  
-turn off the display.  
+- **off()**
+turn off the display.
 
-- **clear()**  
-clear content of the display.  
+- **clear()**
+clear content of the display.
 
-- **showbit(num: number, bit: number)**  
-show a digit number in given position.  
+- **showDigitAt(num: number, pos: number)**
+show a digit in given position.
 
-- **showNumber(num: number)**  
-show a interger number in display.  
+- **showNumber(num: number)**
+show a interger number on display.
 
-- **showHex(num: number)**  
-show a hex number.  
+- **showHex(num: number)**
+show a hex number on display.
 
-- **showDP(bit: number, show: boolean)**  
-show or hide dot piont in give bit  
-bit is dot piont position, [0 - count]  
-show, True will show DP, other will hide it  
+- **showDP(pos: number, show: boolean)**
+show or hide dot piont at given position
+pos is dot point position, [0 - count]
+show, True will show DP, False will hide it
 
-- **intensity(dat: number)**  
-set display intensity.  
+- **intensity(val: number)**
+set display brightness.
+
+- **lightSegmentsAt(segments: number, pos: number)**
+light indicated segments at given position
+segments is display segments to light
+pos is the position of the digit
+segments value can by calculated by adding segmen values:
+![](segment_values.png)
 
 ## Demo
 
-![](https://raw.githubusercontent.com/microbit-makecode-packages/TM1637/master/demo.jpg)
+![](demo.jpg)
+
+## Blocks preview
+
+This image shows the blocks code from the last commit in master.
+This image may take a few minutes to refresh.
+
+![A rendered view of the blocks](https://github.com/devegied/pxt-tm1637/raw/master/.github/makecode/blocks.png)
 
 ## License  
 
 MIT
 
-Copyright (c) 2018, microbit/micropython Chinese community  
+Copyright (c) 2018, [microbit/micropython Chinese community](http://www.micropython.org.cn)
 
-## Supported targets  
+#### Metadata (used for search, rendering)
 
 * for PXT/microbit
-
-
-[From microbit/micropython Chinese community](http://www.micropython.org.cn) 
+<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>

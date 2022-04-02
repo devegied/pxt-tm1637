@@ -1,7 +1,7 @@
 {
     "name": "TM1637",
-    "version": "1.0.0",
-    "description": "makecode LED Digit Display (TM1637) package for micro:bit",
+    "version": "2.0.0",
+    "description": "makecode LED Digit Display (TM1637) extension for micro:bit",
     "license": "MIT",
     "dependencies": {
         "core": "*"
@@ -13,5 +13,9 @@
     "testFiles": [
         "test.ts"
     ],
-    "public": true
+    "public": true,
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
 }
